@@ -1,0 +1,24 @@
+[
+    {
+        "cpf": "09435411908",
+        "estadoCivil": "Solteiro",
+        "nome": "Fulano",
+        "endereco": {
+            "rua": "Rua 1",
+            "cidade": "Cidade 1",
+            "estado": "SC",
+            "numero": 1
+        }
+    },
+    {
+        "cpf": "00000000000",
+        "estadoCivil": "Casado",
+        "nome": "Beltrano",
+        "endereco": {
+            "rua": "Rua 2",
+            "cidade": "Cidade 2",
+            "estado": "SC",
+            "numero": 1
+        }
+    }
+]

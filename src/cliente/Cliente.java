@@ -34,104 +34,104 @@ public class Cliente {
         String request = null;
         switch (ACAO) {
 		case 1: {
-			System.out.println("Digite o nome da pessoa: ");
-			String nome = entrada.nextLine();
-			System.out.println("Digite o cpf:");
-			String cpf = entrada.nextLine();
-			System.out.println("Digite o estado civil: ");
-			String estadoCivil = entrada.nextLine();
-			System.out.println("Digite a rua: ");
-			String rua = entrada.nextLine();
-			System.out.println("Digite a cidade: ");
-			String cidade = entrada.nextLine();
-			System.out.println("Digite o estado: ");
-			String estado = entrada.nextLine();
-			System.out.println("Digite o número: ");
+			System.out.print("Digite o nome da pessoa: ");
+			String nome = entrada.next();
+			System.out.print("Digite o cpf:");
+			String cpf = entrada.next();
+			System.out.print("Digite o estado civil: ");
+			String estadoCivil = entrada.next();
+			System.out.print("Digite a rua: ");
+			String rua = entrada.next();
+			System.out.print("Digite a cidade: ");
+			String cidade = entrada.next();
+			System.out.print("Digite o estado: ");
+			String estado = entrada.next();
+			System.out.print("Digite o número: ");
 			int num = entrada.nextInt();
 			
 			request = "INSERT;"+nome+";"+cpf+";"+estadoCivil+";"+rua+";"+cidade+";"+estado+";"+num;
 			break;
 		}
 		case 2: {
-			System.out.println("Digite o nome da empresa: ");
+			System.out.print("Digite o nome da empresa: ");
 			String nome = entrada.nextLine();
-			System.out.println("Digite o cnpj:");
+			System.out.print("Digite o cnpj:");
 			String cnpj = entrada.nextLine();
-			System.out.println("Digite o tipo de empresa: ");
+			System.out.print("Digite o tipo de empresa: ");
 			String tipoEmpresa = entrada.nextLine();
-			System.out.println("Digite a rua: ");
+			System.out.print("Digite a rua: ");
 			String rua = entrada.nextLine();
-			System.out.println("Digite a cidade: ");
+			System.out.print("Digite a cidade: ");
 			String cidade = entrada.nextLine();
-			System.out.println("Digite o estado: ");
+			System.out.print("Digite o estado: ");
 			String estado = entrada.nextLine();
-			System.out.println("Digite o número: ");
+			System.out.print("Digite o número: ");
 			int num = entrada.nextInt();
 			
 			request = "INSERT;"+nome+";"+cnpj+";"+tipoEmpresa+";"+rua+";"+cidade+";"+estado+";"+num;
 			break;
 		}
 		case 3: {
-			System.out.println("Digite o cpf:");
+			System.out.print("Digite o cpf:");
 			String cpf = entrada.nextLine();
 			
 			request = "GET;"+cpf;
 			break;
 		}
 		case 4: {
-			System.out.println("Digite o cnpj:");
+			System.out.print("Digite o cnpj:");
 			String cnpj = entrada.nextLine();
 			
 			request = "GET;"+cnpj;
 			break;
 		}
 		case 5: {
-			System.out.println("Digite o nome da pessoa: ");
+			System.out.print("Digite o nome da pessoa: ");
 			String nome = entrada.nextLine();
-			System.out.println("Digite o cpf:");
+			System.out.print("Digite o cpf:");
 			String cpf = entrada.nextLine();
-			System.out.println("Digite o estado civil: ");
+			System.out.print("Digite o estado civil: ");
 			String estadoCivil = entrada.nextLine();
-			System.out.println("Digite a rua: ");
+			System.out.print("Digite a rua: ");
 			String rua = entrada.nextLine();
-			System.out.println("Digite a cidade: ");
+			System.out.print("Digite a cidade: ");
 			String cidade = entrada.nextLine();
-			System.out.println("Digite o estado: ");
+			System.out.print("Digite o estado: ");
 			String estado = entrada.nextLine();
-			System.out.println("Digite o número: ");
+			System.out.print("Digite o número: ");
 			int num = entrada.nextInt();
 			
 			request = "UPDATE;"+nome+";"+cpf+";"+estadoCivil+";"+rua+";"+cidade+";"+estado+";"+num;
 			break;
 		}
 		case 6: {
-			System.out.println("Digite o nome da empresa: ");
+			System.out.print("Digite o nome da empresa: ");
 			String nome = entrada.nextLine();
-			System.out.println("Digite o cnpj:");
+			System.out.print("Digite o cnpj:");
 			String cnpj = entrada.nextLine();
-			System.out.println("Digite o tipo de empresa: ");
+			System.out.print("Digite o tipo de empresa: ");
 			String tipoEmpresa = entrada.nextLine();
-			System.out.println("Digite a rua: ");
+			System.out.print("Digite a rua: ");
 			String rua = entrada.nextLine();
-			System.out.println("Digite a cidade: ");
+			System.out.print("Digite a cidade: ");
 			String cidade = entrada.nextLine();
-			System.out.println("Digite o estado: ");
+			System.out.print("Digite o estado: ");
 			String estado = entrada.nextLine();
-			System.out.println("Digite o número: ");
+			System.out.print("Digite o número: ");
 			int num = entrada.nextInt();
 			
 			request = "UPDATE;"+nome+";"+cnpj+";"+tipoEmpresa+";"+rua+";"+cidade+";"+estado+";"+num;
 			break;
 		}
 		case 7: {
-			System.out.println("Digite o cpf:");
+			System.out.print("Digite o cpf:");
 			String cpf = entrada.nextLine();
 			
 			request = "DELETE;"+cpf;
 			break;
 		}
 		case 8: {
-			System.out.println("Digite o cnpj:");
+			System.out.print("Digite o cnpj:");
 			String cnpj = entrada.nextLine();
 			
 			request = "DELETE;"+cnpj;
