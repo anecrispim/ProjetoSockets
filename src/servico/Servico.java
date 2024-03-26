@@ -41,7 +41,7 @@ public class Servico {
 		
 		switch (acoes[0]) {
 		case "INSERT": {
-			if (acoes.length == 8) {
+			if (acoes.length != 8) {
 				return "Erro: requisicao nao aceita.";
 			}
 			
@@ -60,7 +60,7 @@ public class Servico {
 			}
 		}
 		case "UPDATE": {
-			if (acoes.length == 8) {
+			if (acoes.length != 8) {
 				return "Erro: requisicao nao aceita.";
 			}
 			
@@ -77,7 +77,7 @@ public class Servico {
 			}
 		}
 		case "GET": {
-			if (acoes.length == 2) {
+			if (acoes.length != 2) {
 				return "Erro: requisicao nao aceita.";
 			}
 			if (acoes[1].length() == 11) {
@@ -91,7 +91,7 @@ public class Servico {
 			}
 		}
 		case "DELETE": {
-			if (acoes.length == 2) {
+			if (acoes.length != 2) {
 				return "Erro: requisicao nao aceita.";
 			}
 			if (acoes[1].length() == 11) {
@@ -112,7 +112,7 @@ public class Servico {
 			}
 		}
 		case "LIST-PF": {
-			if (acoes.length == 1) {
+			if (acoes.length != 1) {
 				return "Erro: requisicao nao aceita.";
 			}
 			PessoaFisica pf = new PessoaFisica();
@@ -120,7 +120,7 @@ public class Servico {
 			
 		}
 		case "LIST-PJ": {
-			if (acoes.length == 1) {
+			if (acoes.length != 1) {
 				return "Erro: requisicao nao aceita.";
 			}
 			PessoaJuridica pj = new PessoaJuridica();
