@@ -12,7 +12,7 @@ public class Servico {
 		final int PORTA = 8080;
 
         try (ServerSocket serverSocket = new ServerSocket(PORTA)) {
-            System.out.println("Servidor aguardando conexão...");
+            System.out.println("Servidor aguardando conexao...");
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
@@ -42,7 +42,7 @@ public class Servico {
 		switch (acoes[0]) {
 		case "INSERT": {
 			if (acoes.length == 8) {
-				return "Erro: requisição não aceita.";
+				return "Erro: requisicao nao aceita.";
 			}
 			
 			Endereco ed = new Endereco(acoes[4], acoes[5], acoes[6], Integer.parseInt(acoes[7]));
@@ -56,12 +56,12 @@ public class Servico {
 				pj.incluir();
 				return "";
 			} else {
-				return "Erro: CPF/CNPJ Inválidos.";
+				return "Erro: CPF/CNPJ Invalidos.";
 			}
 		}
 		case "UPDATE": {
 			if (acoes.length == 8) {
-				return "Erro: requisição não aceita.";
+				return "Erro: requisicao nao aceita.";
 			}
 			
 			Endereco ed = new Endereco(acoes[4], acoes[5], acoes[6], Integer.parseInt(acoes[7]));
@@ -73,12 +73,12 @@ public class Servico {
 				PessoaJuridica pj = new PessoaJuridica(acoes[1], ed, acoes[2], acoes[3]);
 				return pj.update(acoes[1], ed, acoes[2], acoes[3]);
 			} else {
-				return "Erro: CPF/CNPJ Inválidos.";
+				return "Erro: CPF/CNPJ Invalidos.";
 			}
 		}
 		case "GET": {
 			if (acoes.length == 2) {
-				return "Erro: requisição não aceita.";
+				return "Erro: requisicao nao aceita.";
 			}
 			if (acoes[1].length() == 11) {
 				PessoaFisica pf = new PessoaFisica();
@@ -87,33 +87,33 @@ public class Servico {
 				PessoaJuridica pj = new PessoaJuridica();
 				return pj.get(acoes[1]);
 			} else {
-				return "Erro: CPF/CNPJ Inválidos.";
+				return "Erro: CPF/CNPJ Invalidos.";
 			}
 		}
 		case "DELETE": {
 			if (acoes.length == 2) {
-				return "Erro: requisição não aceita.";
+				return "Erro: requisicao nao aceita.";
 			}
 			if (acoes[1].length() == 11) {
 				PessoaFisica pf = new PessoaFisica();
 				if (pf.delete(acoes[1], false)) {
-					return "Pessoa física removida com sucesso.";
+					return "Pessoa fisica removida com sucesso.";
 				}
-				return "Pessoa física não encontrada.";
+				return "Pessoa fisica nao encontrada.";
 				
 			} else if (acoes[1].length() == 14) {
 				PessoaJuridica pj = new PessoaJuridica();
 				if (pj.delete(acoes[1], false)) {
-					return "Pessoa jurídica removida com sucesso.";
+					return "Pessoa juridica removida com sucesso.";
 				}
-				return "Pessoa jurídica não encontrada.";
+				return "Pessoa juridica nao encontrada.";
 			} else {
-				return "Erro: CPF/CNPJ Inválidos.";
+				return "Erro: CPF/CNPJ Invalidos.";
 			}
 		}
 		case "LIST-PF": {
 			if (acoes.length == 1) {
-				return "Erro: requisição não aceita.";
+				return "Erro: requisicao nao aceita.";
 			}
 			PessoaFisica pf = new PessoaFisica();
 			return pf.list();
@@ -121,14 +121,14 @@ public class Servico {
 		}
 		case "LIST-PJ": {
 			if (acoes.length == 1) {
-				return "Erro: requisição não aceita.";
+				return "Erro: requisicao nao aceita.";
 			}
 			PessoaJuridica pj = new PessoaJuridica();
 			return pj.list();
 			
 		}
 		default:
-			return "Erro: requisição não aceita.";
+			return "Erro: requisicao nao aceita.";
 		}
 	}
 }

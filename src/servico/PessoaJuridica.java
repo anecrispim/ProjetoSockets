@@ -84,9 +84,9 @@ public class PessoaJuridica extends Pessoa {
 			PessoaJuridica pj = new PessoaJuridica(nome, endereco, cnpj, tipoEmpresa);
 			pj.incluir();
 			pj.getEndereco().updateInsert();
-			return "Pessoa jurídica alterada com sucesso.";
+			return "Pessoa juridica alterada com sucesso.";
 		} else {
-			return "Pessoa jurídica não encontrada.";
+			return "Pessoa juridica não encontrada.";
 		}
 	}
 	
@@ -107,7 +107,7 @@ public class PessoaJuridica extends Pessoa {
 	public String get(String cnpj) {
 		List<PessoaJuridica> lista = this.select();
 		if (lista == null) {
-			return "Sem pessoas jurídicas cadastradas.";
+			return "Sem pessoas juridicas cadastradas.";
 		}
 		
 		for (PessoaJuridica pj : lista) {
@@ -115,7 +115,7 @@ public class PessoaJuridica extends Pessoa {
 				return pj.toString();
 			}
 		}
-		return "Pessoa jurídica não encontrada.";
+		return "Pessoa juridica não encontrada.";
 	}
 	
 	public String list() {
@@ -138,7 +138,7 @@ public class PessoaJuridica extends Pessoa {
 		
 		if (lista == null) {
 			if (mostraMsg) {
-				System.out.println("Sem pessoas jurídicas cadastradas.");
+				System.out.println("Sem pessoas juridicas cadastradas.");
 			}
 			return false;
 		}
@@ -148,13 +148,13 @@ public class PessoaJuridica extends Pessoa {
 				lista.remove(pj);
 				pj.restaurarLista(lista);
 				if (mostraMsg) {
-					System.out.println("Pessoa jurídica removida com sucesso.");
+					System.out.println("Pessoa juridica removida com sucesso.");
 				}
 				return true;
 			}
 		}
 		if (mostraMsg) {
-			System.out.println("Pessoa jurídica não encontrada.");
+			System.out.println("Pessoa juridica não encontrada.");
 		}
 		return false;
 	}

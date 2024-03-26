@@ -80,9 +80,9 @@ public class PessoaFisica extends Pessoa {
 			PessoaFisica pf = new PessoaFisica(nome, endereco, cpf, estadoCivil);
 			pf.incluir();
 			pf.getEndereco().updateInsert();
-			return "Pessoa física alterada com sucesso.";
+			return "Pessoa fisica alterada com sucesso.";
 		} else {
-			return "Pessoa física não encontrada.";
+			return "Pessoa fisica não encontrada.";
 		}
 	}
 	
@@ -103,7 +103,7 @@ public class PessoaFisica extends Pessoa {
 	public String get(String cpf) {
 		List<PessoaFisica> lista = this.select();
 		if (lista == null) {
-			return "Sem pessoas físicas cadastradas.";
+			return "Sem pessoas fisicas cadastradas.";
 		}
 		
 		for (PessoaFisica pf : lista) {
@@ -111,7 +111,7 @@ public class PessoaFisica extends Pessoa {
 				return pf.toString();
 			}
 		}
-		return "Pessoa física não encontrada.";
+		return "Pessoa fisica não encontrada.";
 	}
 	
 	public String list() {
@@ -135,7 +135,7 @@ public class PessoaFisica extends Pessoa {
 		
 		if (lista == null) {
 			if (mostraMsg) {
-				System.out.println("Sem pessoas físicas cadastradas.");
+				System.out.println("Sem pessoas fisicas cadastradas.");
 			}
 			return false;
 		}
@@ -145,13 +145,13 @@ public class PessoaFisica extends Pessoa {
 				lista.remove(pf);
 				pf.restaurarLista(lista);
 				if (mostraMsg) {
-					System.out.println("Pessoa física removida com sucesso.");
+					System.out.println("Pessoa fisica removida com sucesso.");
 				}
 				return true;
 			}
 		}
 		if (mostraMsg) {
-			System.out.println("Pessoa física não encontrada.");
+			System.out.println("Pessoa fisica não encontrada.");
 		}
 		return false;
 	}

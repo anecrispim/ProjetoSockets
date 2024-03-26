@@ -12,23 +12,23 @@ public class Cliente {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		
-		System.out.println("Endereço Servidor: ");
+		System.out.println("Endereco Servidor: ");
 		final String ENDERECO_SERVIDOR = entrada.nextLine();
 		
 		System.out.println("Porta Servidor: ");
         final int PORTA = entrada.nextInt();
         
         System.out.println("O que voce deseja fazer?");
-        System.out.println("1 - INSERT Pessoa física");
-        System.out.println("2 - INSERT Pessoa jurídica");
-        System.out.println("3 - GET Pessoa física");
-        System.out.println("4 - GET Pessoa jurídica");
-        System.out.println("5 - UPDATE Pessoa física");
-        System.out.println("6 - UPDATE Pessoa jurídica");
-        System.out.println("7 - DELETE Pessoa física");
-        System.out.println("8 - DELETE Pessoa jurídica");
-        System.out.println("9 - LIST Pessoa física");
-        System.out.println("10 - LIST Pessoa jurídica");
+        System.out.println("1 - INSERT Pessoa fisica");
+        System.out.println("2 - INSERT Pessoa juridica");
+        System.out.println("3 - GET Pessoa fisica");
+        System.out.println("4 - GET Pessoa juridica");
+        System.out.println("5 - UPDATE Pessoa fisica");
+        System.out.println("6 - UPDATE Pessoa juridica");
+        System.out.println("7 - DELETE Pessoa fisica");
+        System.out.println("8 - DELETE Pessoa juridica");
+        System.out.println("9 - LIST Pessoa fisica");
+        System.out.println("10 - LIST Pessoa juridica");
         final int ACAO = entrada.nextInt();
         
         String request = null;
@@ -146,7 +146,7 @@ public class Cliente {
 			break;
 		}
 		default:
-			System.out.println("Ação Inválida");;
+			System.out.println("Acao Inválida");;
 		}  
 
         try (Socket socket = new Socket(ENDERECO_SERVIDOR, PORTA)) {
