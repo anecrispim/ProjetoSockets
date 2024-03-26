@@ -160,11 +160,14 @@ public class Cliente {
             // Receber resposta do servidor
             String respostaDoServidor = in.readLine();
             System.out.println(respostaDoServidor);
+            
+            socket.close();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
         
+       
         entrada.close();
 	}
 }
