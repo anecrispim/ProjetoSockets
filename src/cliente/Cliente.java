@@ -17,6 +17,7 @@ public class Cliente {
 		
 		System.out.println("Porta Servidor: ");
         final int PORTA = entrada.nextInt();
+        entrada.nextLine();
         
         System.out.println("O que voce deseja fazer?");
         System.out.println("1 - INSERT Pessoa fisica");
@@ -30,22 +31,23 @@ public class Cliente {
         System.out.println("9 - LIST Pessoa fisica");
         System.out.println("10 - LIST Pessoa juridica");
         final int ACAO = entrada.nextInt();
+        entrada.nextLine();
         
         String request = null;
         switch (ACAO) {
 		case 1: {
 			System.out.print("Digite o nome da pessoa: ");
-			String nome = entrada.next();
+			String nome = entrada.nextLine();
 			System.out.print("Digite o cpf:");
-			String cpf = entrada.next();
+			String cpf = entrada.nextLine();
 			System.out.print("Digite o estado civil: ");
-			String estadoCivil = entrada.next();
+			String estadoCivil = entrada.nextLine();
 			System.out.print("Digite a rua: ");
-			String rua = entrada.next();
+			String rua = entrada.nextLine();
 			System.out.print("Digite a cidade: ");
-			String cidade = entrada.next();
+			String cidade = entrada.nextLine();
 			System.out.print("Digite o estado: ");
-			String estado = entrada.next();
+			String estado = entrada.nextLine();
 			System.out.print("Digite o número: ");
 			int num = entrada.nextInt();
 			

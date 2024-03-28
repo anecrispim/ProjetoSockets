@@ -47,11 +47,11 @@ public class Servico {
 			
 			Endereco ed = new Endereco(acoes[4], acoes[5], acoes[6], Integer.parseInt(acoes[7]));
 			
-			if (acoes[3].length() == 11) {
+			if (acoes[2].trim().length() == 11) {
 				PessoaFisica pf = new PessoaFisica(acoes[1], ed, acoes[2], acoes[3]);
 				pf.incluir();
 				return "";
-			} else if (acoes[3].length() == 14) {
+			} else if (acoes[2].trim().length() == 14) {
 				PessoaJuridica pj = new PessoaJuridica(acoes[1], ed, acoes[2], acoes[3]);
 				pj.incluir();
 				return "";
@@ -66,10 +66,10 @@ public class Servico {
 			
 			Endereco ed = new Endereco(acoes[4], acoes[5], acoes[6], Integer.parseInt(acoes[7]));
 			
-			if (acoes[3].length() == 11) {
+			if (acoes[2].trim().length() == 11) {
 				PessoaFisica pf = new PessoaFisica(acoes[1], ed, acoes[2], acoes[3]);
 				return pf.update(acoes[1], ed, acoes[2], acoes[3]);
-			} else if (acoes[3].length() == 14) {
+			} else if (acoes[2].trim().length() == 14) {
 				PessoaJuridica pj = new PessoaJuridica(acoes[1], ed, acoes[2], acoes[3]);
 				return pj.update(acoes[1], ed, acoes[2], acoes[3]);
 			} else {
@@ -80,10 +80,10 @@ public class Servico {
 			if (acoes.length != 2) {
 				return "Erro: requisicao nao aceita.";
 			}
-			if (acoes[1].length() == 11) {
+			if (acoes[1].trim().length() == 11) {
 				PessoaFisica pf = new PessoaFisica();
 				return pf.get(acoes[1]);
-			} else if (acoes[1].length() == 14) {
+			} else if (acoes[1].trim().length() == 14) {
 				PessoaJuridica pj = new PessoaJuridica();
 				return pj.get(acoes[1]);
 			} else {
@@ -94,14 +94,14 @@ public class Servico {
 			if (acoes.length != 2) {
 				return "Erro: requisicao nao aceita.";
 			}
-			if (acoes[1].length() == 11) {
+			if (acoes[1].trim().length() == 11) {
 				PessoaFisica pf = new PessoaFisica();
 				if (pf.delete(acoes[1], false)) {
 					return "Pessoa fisica removida com sucesso.";
 				}
 				return "Pessoa fisica nao encontrada.";
 				
-			} else if (acoes[1].length() == 14) {
+			} else if (acoes[1].trim().length() == 14) {
 				PessoaJuridica pj = new PessoaJuridica();
 				if (pj.delete(acoes[1], false)) {
 					return "Pessoa juridica removida com sucesso.";
