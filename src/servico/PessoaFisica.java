@@ -121,10 +121,10 @@ public class PessoaFisica extends Pessoa {
 			return "Nenhum registro encontrado";
 		}
 		
-		String list = lista.size()+"\n";
+		String list = lista.size()+" \n ";
 		
 		for (PessoaFisica pf : lista) {
-			list = list+pf.toString()+"\n";
+			list = list+pf.toString()+" \n ";
 		}
 		return list;
 		

@@ -125,10 +125,10 @@ public class PessoaJuridica extends Pessoa {
 			return "Nenhum registro encontrado";
 		}
 		
-		String list = lista.size()+"\n";
+		String list = lista.size()+" \n ";
 		
 		for (PessoaJuridica pj : lista) {
-			list = list+pj.toString()+"\n";
+			list = list+pj.toString()+" \n ";
 		}
 		return list;
 	}

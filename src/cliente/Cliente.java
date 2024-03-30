@@ -1,8 +1,7 @@
 package cliente;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
@@ -154,13 +153,22 @@ public class Cliente {
         try (Socket socket = new Socket(ENDERECO_SERVIDOR, PORTA)) {
             // Abrir streams de entrada e saída
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            InputStream in = socket.getInputStream();
 
             // Enviar mensagem ao servidor
             out.println(request);
+            
+            byte[] buffer = new byte[1024];
+            StringBuilder messageBuilder = new StringBuilder();
+
+            int bytesRead;
+            while ((bytesRead = in.read(buffer)) != -1) {
+                
+                messageBuilder.append(new String(buffer, 0, bytesRead));
+            }
 
             // Receber resposta do servidor
-            String respostaDoServidor = in.readLine();
+            String respostaDoServidor = messageBuilder.toString();
             System.out.println(respostaDoServidor);
             
             socket.close();

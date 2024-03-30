@@ -17,8 +17,7 @@ public class Servico {
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Cliente conectado: " + clientSocket);
-
-                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream(), "UTF-8"));
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
 
                 // Receber mensagem do cliente
